@@ -1,0 +1,22 @@
+The solution involves increasing the specificity of the rule targeting the paragraph inside the `div`. This can be achieved using a more specific selector or by using the `!important` flag (generally discouraged except in very specific circumstances). Here's an improved version:
+
+```css
+div {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+div p {
+  color: green !important; /* More specific rule */
+}
+
+/*Alternatively, a more specific selector can be used to ensure higher specificity.*/
+div > p {
+  color: green; /* More specific selector*/
+}
+```
+
+Using `!important` should generally be avoided as it can make CSS harder to maintain in the long run. Prioritizing more specific selectors is the best practice for resolving such issues.
